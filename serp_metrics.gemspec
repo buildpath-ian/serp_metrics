@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["kristinalim.ph@gmail.com"]
   gem.description   = %q{Ruby interface to the SERP Metrics API}
   gem.summary       = %q{Ruby interface to the SERP Metrics API}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/wearetribe/serp_metrics.git"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
