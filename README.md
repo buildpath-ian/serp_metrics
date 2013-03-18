@@ -1,6 +1,6 @@
 # SerpMetrics
 
-Ruby interface to the SERP Metrics API
+Ruby interface to the [SERP Metrics](http://serpmetrics.com) API
 
 ## Installation
 
@@ -10,11 +10,35 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
     $ gem install serp_metrics
+
+## Usage
+
+    SerpMetrics.client.configure do |client|
+      client.key = 'API_KEY'$
+      client.secret = 'API_SECRET'
+    end
+
+    SerpMetrics.client.account.credit
+    SerpMetrics.client.account.time
+
+    SerpMetrics.client.engines.codes
+
+    SerpMetrics.client.flux.flux('google_en-us')
+
+    SerpMetrics.client.keywords.add("restaurants", ['google_en-us'])
+    SerpMetrics.client.keywords.remove(keyword_id)
+    SerpMetrics.client.keywords.check(keyword_id, ['google_en-us'])
+    SerpMetrics.client.keywords.serp(check_id)
+    SerpMetrics.client.keywords.all
+
+    SerpMetrics.client.priorities.add("restaurants", ['google_en-us'])
+    SerpMetrics.client.priorities.add("restaurants", ['google_en-us'], "Nashville")
+    SerpMetrics.client.priorities.get(priority_id)
 
 ## Contributing
 
