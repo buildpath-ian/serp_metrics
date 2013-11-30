@@ -27,6 +27,17 @@ describe SerpMetrics::Client do
     end
   end
 
+  describe ".delayed" do
+    it "assigns client for command set" do
+      @client.delayed.client.should be_equal(@client)
+    end
+
+    it "caches command set for client" do
+      old_command_set = @client.delayed
+      @client.delayed.should be_equal(old_command_set)
+    end
+  end
+
   describe ".priority" do
     it "assigns client for command set" do
       @client.priority.client.should be_equal(@client)

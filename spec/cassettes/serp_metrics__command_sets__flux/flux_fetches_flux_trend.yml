@@ -5,7 +5,7 @@ http_interactions:
     uri: http://api.serpmetrics.com/flux/trend
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D&params=%7B%22engine_code%22%3A%22google_en-us%22%2C%22type%22%3A%22daily%22%7D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D&params=%7B%22engine_code%22%3A%22google_en-us%22%2C%22type%22%3A%22daily%22%7D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -17,7 +17,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 06:35:40 GMT
+      - Sat, 30 Nov 2013 07:31:29 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -27,7 +27,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=0su0bqvhpko4mbg7u7736jm544; path=/; HttpOnly
+      - app=scihv0p31nchb5rgk2g29f5l37; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -36,7 +36,7 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"error\",\"data\":{\"1383112801\":319,\"1383199201\":333,\"1383285601\":334,\"1383372001\":347,\"1383458401\":334,\"1383544801\":324,\"1383631201\":339,\"1383717601\":342,\"1383804001\":334,\"1383890401\":388,\"1383976801\":371,\"1384063201\":311,\"1384149601\":296,\"1384236001\":297,\"1384322401\":337,\"1384387200\":338,\"1384495201\":469,\"1384581601\":421,\"1384668001\":382,\"1384754401\":387,\"1384840801\":389,\"1384927201\":398,\"1385013601\":412,\"1385100001\":396,\"1385186401\":356,\"1385251200\":363,\"1385359201\":382,\"1385445601\":402,\"1385510400\":452,\"1385596800\":340},\"request_time\":1385793340}"
+      string: "{\"status\":\"error\",\"data\":{\"1383112801\":319,\"1383199201\":333,\"1383285601\":334,\"1383372001\":347,\"1383458401\":334,\"1383544801\":324,\"1383631201\":339,\"1383717601\":342,\"1383804001\":334,\"1383890401\":388,\"1383976801\":371,\"1384063201\":311,\"1384149601\":296,\"1384236001\":297,\"1384322401\":337,\"1384387200\":338,\"1384495201\":469,\"1384581601\":421,\"1384668001\":382,\"1384754401\":387,\"1384840801\":389,\"1384927201\":398,\"1385013601\":412,\"1385100001\":396,\"1385186401\":356,\"1385251200\":363,\"1385359201\":382,\"1385445601\":402,\"1385510400\":452,\"1385596800\":340},\"request_time\":1385796689}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
+  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
 recorded_with: VCR 2.4.0

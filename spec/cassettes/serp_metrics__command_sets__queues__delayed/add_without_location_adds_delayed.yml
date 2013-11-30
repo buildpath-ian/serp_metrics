@@ -2,22 +2,22 @@
 http_interactions: 
 - request: 
     method: post
-    uri: http://api.serpmetrics.com/users/credit
+    uri: http://api.serpmetrics.com/delayed/add
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796873&auth=KmO1tWZa4IRWRRs2mnH5I5LpGwWlog8ulbUQsQbDerk%3D&params=%7B%22keyword%22%3A%22restaurants%22%2C%22engines%22%3A%5B%22google_en-us%22%5D%7D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
   response: 
     status: 
-      code: 200
-      message: OK
+      code: 201
+      message: Created
     headers: 
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 07:26:38 GMT
+      - Sat, 30 Nov 2013 07:34:35 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -27,7 +27,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=814nebuph0u313c1j5ujlms5h4; path=/; HttpOnly
+      - app=91ditprqep23f92gfn19tagdc2; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -36,7 +36,7 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"ok\",\"data\":{\"api_key\":\"<SERP_METRICS_KEY>\",\"balance\":0,\"api_credit\":-179.8,\"serp_credit\":2874},\"request_time\":1385796398}"
+      string: "{\"status\":\"ok\",\"data\":[{\"phrase\":\"restaurants\",\"engine_code\":\"google_en-us\",\"delayed_id\":\"5299965c4513a748440000a8\"}],\"request_time\":1385796875}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
+  recorded_at: Sat, 30 Nov 2013 07:34:33 GMT
 recorded_with: VCR 2.4.0

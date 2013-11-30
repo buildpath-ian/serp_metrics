@@ -5,7 +5,7 @@ http_interactions:
     uri: http://api.serpmetrics.com/keywords/serp
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D&params=%7B%22check_id%22%3A%2203bcc63a-dc00-4a41-8010-4fc3346e85b5%22%2C%22domain%22%3Anull%7D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D&params=%7B%22check_id%22%3A%2203bcc63a-dc00-4a41-8010-4fc3346e85b5%22%2C%22domain%22%3Anull%7D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -17,7 +17,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 06:25:55 GMT
+      - Sat, 30 Nov 2013 07:26:26 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -27,7 +27,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=p029h9bol4c69hp7fm7vhpku14; path=/; HttpOnly
+      - app=9k23oqd20o9ivfugsil0pmpgb4; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -38,13 +38,13 @@ http_interactions:
       encoding: US-ASCII
       string: "{\"status\":\"error\",\"message\":\"Supplied check_id not found: 03bcc63a-dc00-4a41-8010-4fc3346e85b5\"}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
+  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
 - request: 
     method: post
     uri: http://api.serpmetrics.com/keywords/all
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -56,7 +56,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 06:35:00 GMT
+      - Sat, 30 Nov 2013 07:31:48 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -66,7 +66,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=0fr0p92itj8qdrp1jrvabkbpn7; path=/; HttpOnly
+      - app=f3grctiq7eo3kb2cdjdi58a4p3; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -75,15 +75,15 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"ok\",\"request_time\":1385793300,\"data\":[]}"
+      string: "{\"status\":\"ok\",\"request_time\":1385796708,\"data\":[]}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
+  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
 - request: 
     method: post
     uri: http://api.serpmetrics.com/keywords/all
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -95,7 +95,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 06:30:08 GMT
+      - Sat, 30 Nov 2013 07:26:55 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -105,7 +105,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=2da00503jagamv5t3b9d3k4631; path=/; HttpOnly
+      - app=g9ht5hd9lq44j4t850qu472380; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -114,7 +114,7 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"ok\",\"request_time\":1385793008,\"data\":[]}"
+      string: "{\"status\":\"ok\",\"request_time\":1385796415,\"data\":[]}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
+  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
 recorded_with: VCR 2.4.0

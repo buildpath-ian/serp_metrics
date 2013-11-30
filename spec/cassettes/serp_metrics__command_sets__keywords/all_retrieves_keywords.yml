@@ -5,7 +5,7 @@ http_interactions:
     uri: http://api.serpmetrics.com/keywords/add
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D&params=%7B%22keyword%22%3A%22restaurants%22%2C%22engines%22%3A%5B%22google_en-us%22%5D%7D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D&params=%7B%22keyword%22%3A%22restaurants%22%2C%22engines%22%3A%5B%22google_en-us%22%5D%7D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -17,7 +17,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 06:35:12 GMT
+      - Sat, 30 Nov 2013 07:31:02 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -27,7 +27,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=enga92lde5enhu29cj8fe4fcn1; path=/; HttpOnly
+      - app=5kpo8uudp0psoiddjuk7rvr705; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -38,13 +38,13 @@ http_interactions:
       encoding: US-ASCII
       string: "{\"status\":\"ok\",\"data\":{\"keyword_id\":\"5146926072484b125b000000\",\"keyword\":\"restaurants\",\"engines\":[\"google_en-us\"]}}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
+  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
 - request: 
     method: post
     uri: http://api.serpmetrics.com/keywords/all
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -56,7 +56,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 06:29:52 GMT
+      - Sat, 30 Nov 2013 07:31:03 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -66,7 +66,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=5vqninp6jei4b5l22q62m4nhn6; path=/; HttpOnly
+      - app=7hmqnb1hiq4akeggqkqdpheov3; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -75,15 +75,15 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"ok\",\"request_time\":1385792992,\"data\":{\"5146926072484b125b000000\":{\"phrase\":\"restaurants\",\"engines\":[\"google_en-us\"]}}}"
+      string: "{\"status\":\"ok\",\"request_time\":1385796663,\"data\":{\"5146926072484b125b000000\":{\"phrase\":\"restaurants\",\"engines\":[\"google_en-us\"]}}}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
+  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
 - request: 
     method: post
     uri: http://api.serpmetrics.com/keywords/all
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -95,7 +95,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 06:35:59 GMT
+      - Sat, 30 Nov 2013 07:32:18 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -105,7 +105,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=e5k288n55kieb58bsrs80e79p6; path=/; HttpOnly
+      - app=camdhskrtpph2ouf5t3b015eb7; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -114,15 +114,15 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"ok\",\"request_time\":1385793359,\"data\":{\"5146926072484b125b000000\":{\"phrase\":\"restaurants\",\"engines\":[\"google_en-us\"]}}}"
+      string: "{\"status\":\"ok\",\"request_time\":1385796738,\"data\":{\"5146926072484b125b000000\":{\"phrase\":\"restaurants\",\"engines\":[\"google_en-us\"]}}}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
+  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
 - request: 
     method: post
     uri: http://api.serpmetrics.com/keywords/delete
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D&params=%7B%22keyword_id%22%3A%225146926072484b125b000000%22%7D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D&params=%7B%22keyword_id%22%3A%225146926072484b125b000000%22%7D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -134,7 +134,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 06:30:21 GMT
+      - Sat, 30 Nov 2013 07:22:30 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -144,7 +144,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=m1n34nefbr9sec48d4g5vpohu4; path=/; HttpOnly
+      - app=qj51omn8v1e51h9tvee4v6hkl6; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -153,15 +153,15 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"ok\",\"request_time\":1385793020,\"data\":[{\"keyword_id\":\"5146926072484b125b000000\",\"status\":\"ok\"}]}"
+      string: "{\"status\":\"ok\",\"request_time\":1385796150,\"data\":[{\"keyword_id\":\"5146926072484b125b000000\",\"status\":\"ok\"}]}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
+  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
 - request: 
     method: post
     uri: http://api.serpmetrics.com/keywords/all
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -173,7 +173,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 06:26:11 GMT
+      - Sat, 30 Nov 2013 07:26:14 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -183,7 +183,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=7td8chjme7dpmgbcl62p90d2s5; path=/; HttpOnly
+      - app=c29sdvortp1i2o2kljpompdid3; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -192,7 +192,7 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"ok\",\"request_time\":1385792771,\"data\":[]}"
+      string: "{\"status\":\"ok\",\"request_time\":1385796374,\"data\":[]}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
+  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
 recorded_with: VCR 2.4.0

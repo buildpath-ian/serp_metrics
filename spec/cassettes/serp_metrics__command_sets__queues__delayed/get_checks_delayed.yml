@@ -2,10 +2,10 @@
 http_interactions: 
 - request: 
     method: post
-    uri: http://api.serpmetrics.com/priority/add
+    uri: http://api.serpmetrics.com/delayed/add
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D&params=%7B%22keyword%22%3A%22restaurants%22%2C%22engines%22%3A%5B%22google_en-us%22%5D%7D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796873&auth=KmO1tWZa4IRWRRs2mnH5I5LpGwWlog8ulbUQsQbDerk%3D&params=%7B%22keyword%22%3A%22restaurants%22%2C%22engines%22%3A%5B%22google_en-us%22%5D%7D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -17,7 +17,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 07:26:43 GMT
+      - Sat, 30 Nov 2013 07:40:12 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -27,7 +27,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=m9t7s2243ug50n4ucrmb1qip53; path=/; HttpOnly
+      - app=65otnm8nlosdbgjc6n710qa0k3; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -36,15 +36,15 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"ok\",\"data\":[{\"phrase\":\"restaurants\",\"engine_code\":\"google_en-us\",\"priority_id\":\"5299934c3fc134e66000007a\"}],\"request_time\":1385796403}"
+      string: "{\"status\":\"ok\",\"data\":[{\"phrase\":\"restaurants\",\"engine_code\":\"google_en-us\",\"delayed_id\":\"5299965c4513a748440000a8\"}],\"request_time\":1385797212}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
+  recorded_at: Sat, 30 Nov 2013 07:34:33 GMT
 - request: 
     method: post
-    uri: http://api.serpmetrics.com/priority/status
+    uri: http://api.serpmetrics.com/delayed/status
     body: 
       encoding: US-ASCII
-      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796397&auth=gZhSCcStSVOKWve6sdJ5jpgyFNw2gXBc5HIth%2FIV92w%3D&params=%7B%22priority_id%22%3A%225299934c3fc134e66000007a%22%7D
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385796873&auth=KmO1tWZa4IRWRRs2mnH5I5LpGwWlog8ulbUQsQbDerk%3D&params=%7B%22delayed_id%22%3A%225299965c4513a748440000a8%22%7D
     headers: 
       Content-Type: 
       - application/x-www-form-urlencoded
@@ -56,7 +56,7 @@ http_interactions:
       Server: 
       - nginx/1.2.9
       Date: 
-      - Sat, 30 Nov 2013 07:31:36 GMT
+      - Sat, 30 Nov 2013 07:30:24 GMT
       Content-Type: 
       - application/json; charset=UTF-8
       Transfer-Encoding: 
@@ -66,7 +66,7 @@ http_interactions:
       X-Powered-By: 
       - PHP/5.4.13--pl1-gentoo
       Set-Cookie: 
-      - app=qqb8j2j54e66ujkk1qvps1k112; path=/; HttpOnly
+      - app=kfg8ufejgffff42neapt72c0a4; path=/; HttpOnly
       Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
       Cache-Control: 
@@ -75,7 +75,7 @@ http_interactions:
       - no-cache
     body: 
       encoding: US-ASCII
-      string: "{\"status\":\"error\",\"message\":\"Currently in queue, please retry shortly\",\"request_time\":1385796696}"
+      string: "{\"status\":\"error\",\"message\":\"Awaiting queue slot.\",\"request_time\":1385796624}"
     http_version: 
-  recorded_at: Sat, 30 Nov 2013 07:26:37 GMT
+  recorded_at: Sat, 30 Nov 2013 07:34:33 GMT
 recorded_with: VCR 2.4.0

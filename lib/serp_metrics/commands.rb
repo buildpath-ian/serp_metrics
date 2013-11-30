@@ -8,6 +8,10 @@ module SerpMetrics
       @account ||= SerpMetrics::CommandSets::Account.new(self)
     end
 
+    def delayed
+      @delayed ||= SerpMetrics::CommandSets::Queues::Delayed.new(self)
+    end
+
     def priority
       @priority ||= SerpMetrics::CommandSets::Queues::Priority.new(self)
     end

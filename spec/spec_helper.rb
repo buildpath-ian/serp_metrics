@@ -33,7 +33,7 @@ RSpec.configure do |config|
 
   # timecop
   config.before(:each) do
-    Timecop.freeze(Time.at(1385792990))
+    Timecop.freeze(Time.at(1385796873))
   end
 
   config.after(:each) do
