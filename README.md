@@ -19,7 +19,7 @@ Or install it yourself as:
 ## Usage
 
     SerpMetrics.client.configure do |client|
-      client.key = 'API_KEY'$
+      client.key = 'API_KEY'
       client.secret = 'API_SECRET'
     end
 
