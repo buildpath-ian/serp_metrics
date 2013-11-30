@@ -8,8 +8,8 @@ module SerpMetrics
       @account ||= SerpMetrics::CommandSets::Account.new(self)
     end
 
-    def priorities
-      @priorities ||= SerpMetrics::CommandSets::Priorities.new(self)
+    def priority
+      @priority ||= SerpMetrics::CommandSets::Queues::Priority.new(self)
     end
 
     def flux

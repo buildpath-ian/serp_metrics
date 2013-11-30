@@ -9,7 +9,7 @@ require 'serp_metrics/command_sets/account'
 require 'serp_metrics/command_sets/engines'
 require 'serp_metrics/command_sets/flux'
 require 'serp_metrics/command_sets/keywords'
-require 'serp_metrics/command_sets/priorities'
+require 'serp_metrics/command_sets/queues'
 require 'serp_metrics/commands'
 require 'serp_metrics/client'
 

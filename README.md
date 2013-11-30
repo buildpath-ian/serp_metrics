@@ -36,9 +36,9 @@ Or install it yourself as:
     SerpMetrics.client.keywords.serp(check_id)
     SerpMetrics.client.keywords.all
 
-    SerpMetrics.client.priorities.add("restaurants", ['google_en-us'])
-    SerpMetrics.client.priorities.add("restaurants", ['google_en-us'], "Nashville")
-    SerpMetrics.client.priorities.get(priority_id)
+    SerpMetrics.client.priority.add("restaurants", ['google_en-us'])
+    SerpMetrics.client.priority.add("restaurants", ['google_en-us'], "Nashville")
+    SerpMetrics.client.priority.get(priority_id)
 
 ## Contributing
 

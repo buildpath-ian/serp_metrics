@@ -27,14 +27,14 @@ describe SerpMetrics::Client do
     end
   end
 
-  describe ".priorities" do
+  describe ".priority" do
     it "assigns client for command set" do
-      @client.priorities.client.should be_equal(@client)
+      @client.priority.client.should be_equal(@client)
     end
 
     it "caches command set for client" do
-      old_command_set = @client.priorities
-      @client.priorities.should be_equal(old_command_set)
+      old_command_set = @client.priority
+      @client.priority.should be_equal(old_command_set)
     end
   end
 

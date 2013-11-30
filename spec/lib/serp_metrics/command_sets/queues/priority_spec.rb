@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SerpMetrics::CommandSets::Priorities, :vcr do
+describe SerpMetrics::CommandSets::Queues::Priority, :vcr do
   before do
     api_configuration = YAML.load_file('spec/api_credentials.yml')
     @client = SerpMetrics.client.configure do |client|
@@ -12,7 +12,7 @@ describe SerpMetrics::CommandSets::Priorities, :vcr do
   describe "add" do
     context "without location" do
       it "adds priority" do
-        response = @client.priorities.add("restaurants", ['google_en-us'])
+        response = @client.priority.add("restaurants", ['google_en-us'])
         response['status'].should == 'ok'
 
         priority = response['data'].first
@@ -25,7 +25,7 @@ describe SerpMetrics::CommandSets::Priorities, :vcr do
 
     context "with location" do
       it "adds priority" do
-        response = @client.priorities.add("restaurants", ['google_en-us'], "Nashville")
+        response = @client.priority.add("restaurants", ['google_en-us'], "Nashville")
         response['status'].should == 'ok'
 
         priority = response['data'].first
@@ -39,12 +39,12 @@ describe SerpMetrics::CommandSets::Priorities, :vcr do
 
   describe "get" do
     it "checks priority" do
-      response = @client.priorities.add("restaurants", ['google_en-us'])
+      response = @client.priority.add("restaurants", ['google_en-us'])
 
       priority = response['data'].first
       priority_id = priority['priority_id']
 
-      response = @client.priorities.get(priority_id)
+      response = @client.priority.get(priority_id)
       response['status'].should_not be_nil
     end
   end
