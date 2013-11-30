@@ -1,40 +1,42 @@
----
-http_interactions:
-- request:
+--- 
+http_interactions: 
+- request: 
     method: post
     uri: http://api.serpmetrics.com/priority/add
-    body:
+    body: 
       encoding: US-ASCII
-      string: key=h31x%25sd22hgjd2s&ts=1363584772&auth=lROO29qiF4QDoLetbhqb2gKopwnfB%2Bo%2F3g7RGDPcXx8%3D&params=%7B%22keyword%22%3A%22restaurants%22%2C%22engines%22%3A%5B%22google_en-us%22%5D%2C%22location%22%3A%22Nashville%22%7D
-    headers:
-      Content-Type:
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D&params=%7B%22keyword%22%3A%22restaurants%22%2C%22engines%22%3A%5B%22google_en-us%22%5D%2C%22location%22%3A%22Nashville%22%7D
+    headers: 
+      Content-Type: 
       - application/x-www-form-urlencoded
-  response:
-    status:
+  response: 
+    status: 
       code: 201
       message: Created
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 18 Mar 2013 05:35:51 GMT
-      Content-Type:
+    headers: 
+      Server: 
+      - nginx/1.2.9
+      Date: 
+      - Sat, 30 Nov 2013 06:29:57 GMT
+      Content-Type: 
       - application/json; charset=UTF-8
-      Content-Length:
-      - '168'
-      Connection:
-      - keep-alive
-      Cache-Control:
-      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-      Expires:
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - close
+      X-Powered-By: 
+      - PHP/5.4.13--pl1-gentoo
+      Set-Cookie: 
+      - app=2k26k7kvb49p93tjmpkq5uvfr5; path=/; HttpOnly
+      Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
-      Pragma:
+      Cache-Control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma: 
       - no-cache
-      Set-Cookie:
-      - app=pe19h26kipb7om3fpl84ai2uf6; path=/; HttpOnly
-    body:
+    body: 
       encoding: US-ASCII
-      string: ! '{"status":"ok","data":[{"phrase":"restaurants","engine_code":"google_en-us","priority_id":"5146a7effc9f6ec52b000013","location":"Nashville"}],"request_time":1363585108}'
-    http_version: !!null 
-  recorded_at: Mon, 18 Mar 2013 05:32:52 GMT
+      string: "{\"status\":\"ok\",\"data\":[{\"phrase\":\"restaurants\",\"engine_code\":\"google_en-us\",\"priority_id\":\"529987384513a79a160000f6\",\"location\":\"Nashville\"}],\"request_time\":1385792997}"
+    http_version: 
+  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
 recorded_with: VCR 2.4.0

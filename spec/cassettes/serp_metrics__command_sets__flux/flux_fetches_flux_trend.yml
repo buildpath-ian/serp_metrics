@@ -1,46 +1,42 @@
----
-http_interactions:
-- request:
+--- 
+http_interactions: 
+- request: 
     method: post
     uri: http://api.serpmetrics.com/flux/trend
-    body:
+    body: 
       encoding: US-ASCII
-      string: key=h31x%25sd22hgjd2s&ts=1363584772&auth=lROO29qiF4QDoLetbhqb2gKopwnfB%2Bo%2F3g7RGDPcXx8%3D&params=%7B%22engine_code%22%3A%22google_en-us%22%2C%22type%22%3A%22daily%22%7D
-    headers:
-      Content-Type:
+      string: key=<SERP_METRICS_KEY_ENCODED>&ts=1385792990&auth=IVzZ%2BRFEu%2FTFz13I%2BFwu7GSqx0S1vUhQTK5B3TS6bG8%3D&params=%7B%22engine_code%22%3A%22google_en-us%22%2C%22type%22%3A%22daily%22%7D
+    headers: 
+      Content-Type: 
       - application/x-www-form-urlencoded
-  response:
-    status:
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 18 Mar 2013 05:35:31 GMT
-      Content-Type:
+    headers: 
+      Server: 
+      - nginx/1.2.9
+      Date: 
+      - Sat, 30 Nov 2013 06:35:40 GMT
+      Content-Type: 
       - application/json; charset=UTF-8
-      Content-Length:
-      - '563'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Cache-Control:
-      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-      Expires:
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - close
+      X-Powered-By: 
+      - PHP/5.4.13--pl1-gentoo
+      Set-Cookie: 
+      - app=0su0bqvhpko4mbg7u7736jm544; path=/; HttpOnly
+      Expires: 
       - Thu, 19 Nov 1981 08:52:00 GMT
-      Pragma:
+      Cache-Control: 
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma: 
       - no-cache
-      Set-Cookie:
-      - app=kecjthfh9fhguh67937lhdsr27; path=/; HttpOnly
-      X-Cache:
-      - OrchestraCache
-      X-Orchestra-Scheme:
-      - http
-    body:
+    body: 
       encoding: US-ASCII
-      string: ! '{"status":"error","data":{"1360908002":362,"1360994401":335,"1361080802":335,"1361167202":380,"1361253602":396,"1361340001":425,"1361426401":410,"1361512801":375,"1361599201":339,"1361685602":353,"1361772001":330,"1361858401":334,"1361944801":381,"1362031201":381,"1362117602":346,"1362204002":325,"1362290401":324,"1362376801":353,"1362463201":363,"1362549602":392,"1362636001":415,"1362722401":309,"1362808802":344,"1362895201":347,"1362981602":320,"1363068002":326,"1363154401":352,"1363240801":342,"1363327201":349,"1363413601":357},"request_time":1363585088}'
-    http_version: !!null 
-  recorded_at: Mon, 18 Mar 2013 05:32:52 GMT
+      string: "{\"status\":\"error\",\"data\":{\"1383112801\":319,\"1383199201\":333,\"1383285601\":334,\"1383372001\":347,\"1383458401\":334,\"1383544801\":324,\"1383631201\":339,\"1383717601\":342,\"1383804001\":334,\"1383890401\":388,\"1383976801\":371,\"1384063201\":311,\"1384149601\":296,\"1384236001\":297,\"1384322401\":337,\"1384387200\":338,\"1384495201\":469,\"1384581601\":421,\"1384668001\":382,\"1384754401\":387,\"1384840801\":389,\"1384927201\":398,\"1385013601\":412,\"1385100001\":396,\"1385186401\":356,\"1385251200\":363,\"1385359201\":382,\"1385445601\":402,\"1385510400\":452,\"1385596800\":340},\"request_time\":1385793340}"
+    http_version: 
+  recorded_at: Sat, 30 Nov 2013 06:29:50 GMT
 recorded_with: VCR 2.4.0

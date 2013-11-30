@@ -33,7 +33,7 @@ RSpec.configure do |config|
 
   # timecop
   config.before(:each) do
-    Timecop.freeze(Time.at(1363584772))
+    Timecop.freeze(Time.at(1385792990))
   end
 
   config.after(:each) do
@@ -55,7 +55,15 @@ VCR.configure do |config|
     api_configuration['key']
   end
 
+  config.filter_sensitive_data('<SERP_METRICS_KEY_ENCODED>') do
+    URI.encode(api_configuration['key'])
+  end
+
   config.filter_sensitive_data('<SERP_METRICS_SECRET>') do
     api_configuration['secret']
+  end
+
+  config.filter_sensitive_data('<SERP_METRICS_SECRET_ENCODED>') do
+    URI.encode(api_configuration['secret'])
   end
 end
