@@ -34,7 +34,7 @@ module SerpMetrics
           inner_res
         end
 
-        JSON.parse(res.body)
+        JSON.parse(res.body).merge({'raw'=>res.body})
       end
 
       private
