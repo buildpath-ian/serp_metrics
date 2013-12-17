@@ -15,25 +15,35 @@ module SerpMetrics
       private
 
       def get path, query=nil
-        return HTTPClient.get(path,
-          {:query => (to_query(query) unless query.empty?)}
-          ).body unless EM.reactor_thread?
-        f = Fiber.current
-        http = EventMachine::HttpRequest.new(path).get(:query => query)
-        http.errback {f.resume(http.response)}
-        http.callback {f.resume(http.response)}
-        return Fiber.yield
+        if EM.reactor_thread?
+          f = Fiber.current
+          http = EventMachine::HttpRequest.new(path).get(:query => query)
+          http.errback {f.resume(http.response)}
+          http.callback {f.resume(http.response)}
+          return Fiber.yield
+        else
+          return HTTPClient.get(path, {
+            :query => (to_query(query) unless query.empty?)
+            } ).body
+        end
       end
 
       def post path, query
-        return HTTPClient.post(path, 
-          {:body => (to_query(query) unless query.empty?)}
-          ).body unless EM.reactor_thread?
-        f = Fiber.current
-        http = EventMachine::HttpRequest.new(path).post(:body => query)
-        http.errback {f.resume(http.response)}
-        http.callback {f.resume(http.response)}
-        return Fiber.yield
+        if EM.reactor_thread?
+          f = Fiber.current
+          http = EventMachine::HttpRequest.new(path).post(:body => query)
+          http.errback {f.resume(http.response)}
+          http.callback {f.resume(http.response)}
+          return Fiber.yield
+        else
+          inner_res = HTTPClient.post(path, {
+            :body => (to_query(query) unless query.empty?)
+          })
+          if inner_res.redirect?
+            inner_res = HTTPClient.get(inner_res.http_header['Location'].first)
+          end
+          return inner_res.body
+        end
       end
 
       protected
@@ -50,8 +60,10 @@ module SerpMetrics
         when :post
           post(SerpMetrics::API_URI + path, query)
         end
-
-        JSON.parse(body).merge({'raw'=>body})
+        return body
+        puts body
+        json = JSON.parse(body)
+        json.merge({'raw'=>body})
       end
 
       private
