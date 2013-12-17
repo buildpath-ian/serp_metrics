@@ -1,6 +1,7 @@
 require 'eventmachine'
 require 'em-http'
 require 'fiber'
+require 'httpclient'
 
 module SerpMetrics
   module CommandSets
@@ -14,6 +15,9 @@ module SerpMetrics
       private
 
       def get path, query=nil
+        return HTTPClient.get(path,
+          {:query => (to_query(query) unless query.empty?)}
+          ).body unless EM.reactor_thread?
         f = Fiber.current
         http = EventMachine::HttpRequest.new(path).get(:query => query)
         http.errback {f.resume(http.response)}
@@ -22,6 +26,9 @@ module SerpMetrics
       end
 
       def post path, query
+        return HTTPClient.post(path, 
+          {:body => (to_query(query) unless query.empty?)}
+          ).body unless EM.reactor_running?
         f = Fiber.current
         http = EventMachine::HttpRequest.new(path).post(:body => query)
         http.errback {f.resume(http.response)}

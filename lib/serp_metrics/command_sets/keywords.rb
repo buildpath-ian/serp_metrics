@@ -33,8 +33,12 @@ module SerpMetrics
         transact(:post, '/keywords/serp', transaction_options)
       end
 
-      def all
-        transact(:post, '/keywords/all')
+      def all page=1, limit=100
+        transaction_options = {
+          :page => page,
+          :limit => limit
+        }
+        transact(:post, '/keywords/all', transaction_options)
       end
     end
   end
