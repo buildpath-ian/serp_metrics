@@ -28,7 +28,7 @@ module SerpMetrics
       def post path, query
         return HTTPClient.post(path, 
           {:body => (to_query(query) unless query.empty?)}
-          ).body unless EM.reactor_running?
+          ).body unless EM.reactor_thread?
         f = Fiber.current
         http = EventMachine::HttpRequest.new(path).post(:body => query)
         http.errback {f.resume(http.response)}
