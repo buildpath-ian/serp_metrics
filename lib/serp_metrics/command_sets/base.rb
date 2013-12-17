@@ -60,10 +60,8 @@ module SerpMetrics
         when :post
           post(SerpMetrics::API_URI + path, query)
         end
-        return body
-        puts body
-        json = JSON.parse(body)
-        json.merge({'raw'=>body})
+
+        JSON.parse(body).merge({'raw'=>body})
       end
 
       private
