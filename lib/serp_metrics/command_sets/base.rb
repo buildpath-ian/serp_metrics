@@ -61,7 +61,12 @@ module SerpMetrics
           post(SerpMetrics::API_URI + path, query)
         end
 
-        JSON.parse(body).merge({'raw'=>body})
+        begin
+          result = JSON.parse(body)
+        rescue => e
+          result = {'status'=>"error: #{e.message}"}
+        end
+        result.merge({'raw'=>body})
       end
 
       private
