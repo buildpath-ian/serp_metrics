@@ -66,7 +66,7 @@ module SerpMetrics
         rescue => e
           result = {'status'=>"error: #{e.message}"}
         end
-        result.merge({'raw'=>body})
+        result
       end
 
       private
