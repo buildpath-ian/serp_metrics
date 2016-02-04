@@ -64,7 +64,7 @@ module SerpMetrics
         begin
           result = JSON.parse(body)
         rescue => e
-          result = {'status'=>"error: #{e.message}"}
+          result = {'status'=>"error: #{e.message}", 'raw'=>body}
         end
         result
       end
