@@ -1,3 +1,6 @@
+require 'eventmachine'
+require 'em-http'
+require 'fiber'
 require 'httpclient'
 
 module SerpMetrics
@@ -9,6 +12,40 @@ module SerpMetrics
         self.client = client
       end
 
+      private
+
+      def get path, query=nil
+        if EM.reactor_thread?
+          f = Fiber.current
+          http = EventMachine::HttpRequest.new(path).get(:query => query)
+          http.errback {f.resume(http.response)}
+          http.callback {f.resume(http.response)}
+          return Fiber.yield
+        else
+          return HTTPClient.get(path, {
+            :query => (to_query(query) unless query.empty?)
+            } ).body
+        end
+      end
+
+      def post path, query
+        if EM.reactor_thread?
+          f = Fiber.current
+          http = EventMachine::HttpRequest.new(path).post(:body => query)
+          http.errback {f.resume(http.response)}
+          http.callback {f.resume(http.response)}
+          return Fiber.yield
+        else
+          inner_res = HTTPClient.post(path, {
+            :body => (to_query(query) unless query.empty?)
+          })
+          if inner_res.redirect?
+            inner_res = HTTPClient.get(inner_res.http_header['Location'].first)
+          end
+          return inner_res.body
+        end
+      end
+
       protected
 
       def transact(method, path, options = {})
@@ -17,24 +54,19 @@ module SerpMetrics
         query = signature_hash
         query = query.merge(:params => options.to_json) unless options.empty?
 
-        res = case method
+        body = case method
         when :get
-          HTTPClient.get(SerpMetrics::API_URI + path, {
-            :query => (to_query(query) unless query.empty?)
-          })
+          get(SerpMetrics::API_URI + path, query)
         when :post
-          inner_res = HTTPClient.post(SerpMetrics::API_URI + path, {
-            :body => (to_query(query) unless query.empty?)
-          })
-
-          if inner_res.redirect?
-            inner_res = HTTPClient.get(inner_res.http_header['Location'].first)
-          end
-
-          inner_res
+          post(SerpMetrics::API_URI + path, query)
         end
 
-        JSON.parse(res.body)
+        begin
+          result = JSON.parse(body)
+        rescue => e
+          result = {'status'=>"error: #{e.message}", 'raw'=>body}
+        end
+        result
       end
 
       private

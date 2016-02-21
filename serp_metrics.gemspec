@@ -19,4 +19,6 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'multi_json', '~> 1.3'
   gem.add_runtime_dependency 'httpclient', '~> 2.3'
+  gem.add_runtime_dependency 'eventmachine'
+  gem.add_runtime_dependency 'em-http-request'
 end
